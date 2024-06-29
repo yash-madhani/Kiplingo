@@ -1,10 +1,11 @@
-import Navbar from "@/components/Navbar";
-
+import Herosection from "@/components/HeroSection";
 
 export default function Home() {
+  
+
   return (
     <div className="">
-      Test
+      <Herosection/>
     </div>
   );
 }
