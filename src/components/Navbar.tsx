@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Navbar() {
     return (
@@ -6,24 +7,19 @@ function Navbar() {
             <nav className="navbar h-[64px] flex items-center justify-center navbar-expand-lg navbar-light bg-light">
                 <ul className="flex items-center justify-center py-5 bg-slate-900 text-white w-full navbar-nav">
                     <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link active" aria-current="page" href="/">
+                        <Link className="nav-link active" aria-current="page" href="/">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link" href="/Influencers">
+                        <Link className="nav-link" href="/Influencers">
                             Influencers
-                        </a>
+                        </Link>
                     </li>
                     <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link" href="/Brands">
-                            Brands
-                        </a>
-                    </li>
-                    <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link" href="/Campaigns">
+                        <Link className="nav-link" href="/Campaigns">
                             Campaigns
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

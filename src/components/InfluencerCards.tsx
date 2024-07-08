@@ -72,9 +72,9 @@ function InfluencerCards() {
     const [influencersInfo, setInfluencersInfo] = useState(influencersInfoData);
 
   return (
-    <div className="flex flex-wrap justify-center p-0 my-2 w-[80%]">
+    <div className="flex flex-wrap justify-center gap-2 p-0 my-2 w-[80%]">
       {influencersInfo.map((influencer) => (
-        <Card className="m-2 w-[325px] text-left rounded-lg">
+        <Card className="w-[325px] text-left rounded-lg">
         <CardHeader className="">
         <img className="w-full h-44 m-0 rounded-lg" src={ influencer.profilePic || '/images/influencerImage.jpeg'} alt="Profile Pic" />
           

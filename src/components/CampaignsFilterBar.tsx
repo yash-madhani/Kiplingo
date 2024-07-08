@@ -26,6 +26,7 @@ const CampaignCategories = [
   "Sponsored Content",
   "Affiliate Marketing",
   "Event Promotions",
+  "Brand Ambassadorship",
 ];
 const Platforms = [
   "Instagram",
