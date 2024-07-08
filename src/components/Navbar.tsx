@@ -25,16 +25,6 @@ function Navbar() {
                             Campaigns
                         </a>
                     </li>
-                    <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link" href="/Pricing">
-                            Pricing
-                        </a>
-                    </li>
-                    <li className="px-4 nav-item hover:text-orange-500 hover:underline hover:text-lg transition-all duration-200">
-                        <a className="nav-link" href="/Contact">
-                            Contact
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>

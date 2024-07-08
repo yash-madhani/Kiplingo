@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
+import Campaigns from "@/app/Campaigns/page";
 
 const Locations = [
   "New York, USA",
@@ -19,13 +20,12 @@ const Locations = [
   "Miami, USA",
 ];
 
-const Categories = [
-  "Lifestyle",
-  "Fitness",
-  "Food",
-  "Travel",
-  "Beauty",
-  "Photography",
+const CampaignCategories = [
+  "Product Reviews",
+  "Giveaways",
+  "Sponsored Content",
+  "Affiliate Marketing",
+  "Event Promotions",
 ];
 const Platforms = [
   "Instagram",
@@ -36,8 +36,8 @@ const Platforms = [
   "LinkedIn",
 ];
 
-function InfluencersFilterBar() {
-    const [followers, setFollowers] = useState<any>(0);
+function CampaignsFilterBar() {
+  const [followers, setFollowers] = useState<any>(0);
 
   return (
     <div className="w-[20%] h-full text-center pl-4 pt-2">
@@ -60,7 +60,7 @@ function InfluencersFilterBar() {
       <div className="mb-2">
         <p className="text-left font-bold">Categories:</p>
         <div className="text-left pl-2">
-          {Categories.map((category) => (
+          {CampaignCategories.map((category) => (
             <div>
               <Checkbox id={category} />
               <label
@@ -90,25 +90,6 @@ function InfluencersFilterBar() {
           ))}
         </div>
       </div>
-      {/* Followers  */}
-      <div className="mb-2">
-        <p className="text-left font-bold">Followers: {followers}+</p>
-        <div className="flex">
-            <p>0</p>
-            <input
-              type="range"
-              step={1000}
-              min={0}
-              max={1000000}
-              value={followers}
-              className='cursor-pointer w-full'
-              onChange={(e) => { setFollowers(e.target.value) }}
-            />
-            <p>1M+</p>
-            
-        </div>
-        
-      </div>
       {/* Apply Filter Button */}
       <div>
         <Button>Apply Filters</Button>
@@ -117,4 +98,4 @@ function InfluencersFilterBar() {
   );
 }
 
-export default InfluencersFilterBar;
+export default CampaignsFilterBar;
