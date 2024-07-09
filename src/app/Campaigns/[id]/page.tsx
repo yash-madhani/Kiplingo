@@ -54,6 +54,7 @@ const CampaignsInfo = [
 
   const CampaignDetail = () => {
     const params = useParams();
+    console.log(params);
     const { id } = params;
     const campaign = CampaignsInfo.find(c => c.id === parseInt(id as string));
   

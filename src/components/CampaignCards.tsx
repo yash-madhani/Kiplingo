@@ -69,7 +69,7 @@ function CampaignCards() {
           <Card className="mb-2 mr-2">
             <CardHeader>
               <CardTitle>{campaign.title}</CardTitle>
-              <CardDescription>{campaign.brandName}</CardDescription>
+              <CardDescription className="text-lg">{campaign.brandName}</CardDescription>
               <CardDescription>Category: {campaign.campaignType}</CardDescription>
             </CardHeader>
             {/* <CardContent>
