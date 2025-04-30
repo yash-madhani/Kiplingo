@@ -58,7 +58,7 @@ export default function Home() {
                 Log in
               </Button>
             </Link>
-            <Link href="/signup">
+            <Link href="/sign-up">
               <Button size="sm" className="bg-rose-500 hover:bg-rose-600">
                 Sign up
               </Button>
