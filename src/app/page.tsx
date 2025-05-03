@@ -13,6 +13,16 @@ import {
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+
+  const imageSources = [
+    "/images/homepage/Brand 1.jpg",
+    "/images/homepage/Brand 2.jpg",
+    "/images/homepage/Brand 3.jpg",
+    "/images/homepage/Brand 4.png",
+    "/images/homepage/Brand 5.png",
+    "/images/homepage/Brand 6.png",
+  ];
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Navbar */}
@@ -303,7 +313,7 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <div className="rounded-full bg-muted">
                     <Image
-                      src="/placeholder.svg?height=40&width=40"
+                      src="/images/SarahJohson.jpeg"
                       width={40}
                       height={40}
                       alt="Sarah Johnson"
@@ -336,7 +346,7 @@ export default function Home() {
                 <div className="flex items-center space-x-4">
                   <div className="rounded-full bg-muted">
                     <Image
-                      src="/placeholder.svg?height=40&width=40"
+                      src="/images/alexRivera.jpeg"
                       width={40}
                       height={40}
                       alt="Alex Rivera"
@@ -369,17 +379,17 @@ export default function Home() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 py-12 md:grid-cols-3 lg:grid-cols-6">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div key={i} className="flex items-center justify-center p-4">
-                  <Image
-                    src="/placeholder.svg?height=80&width=80"
-                    width={80}
-                    height={80}
-                    alt={`Brand logo ${i}`}
-                    className="grayscale transition-all hover:grayscale-0"
-                  />
-                </div>
-              ))}
+            {imageSources.map((src, index) => (
+  <div key={index} className="flex items-center justify-center p-4">
+    <Image
+      src={src}
+      width={80}
+      height={80}
+      alt={`Brand logo ${index + 1}`}
+      className="grayscale transition-all hover:grayscale-0"
+    />
+  </div>
+))}
             </div>
             <div className="flex justify-center">
               <Link href="/influencers">
