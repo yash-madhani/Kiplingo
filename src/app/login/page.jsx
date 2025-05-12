@@ -12,13 +12,13 @@ import { CardContent } from '@/components/ui/card';
 import { CardHeader } from '@/components/ui/card';
 import { CardTitle } from '@/components/ui/card';
 
-export default function SignupPage() {
+export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const router = useRouter();
 
-  const handleSignup = async () => {
-    const { data, error } = await supabase.auth.signUp({
+  const handleLogin = async () => {
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
@@ -26,7 +26,7 @@ export default function SignupPage() {
     if (error) {
       alert(error.message);
     } else {
-      router.push('/select-role');
+      router.push('/campaigns');
     }
   };
 
@@ -34,7 +34,7 @@ export default function SignupPage() {
     <div className="flex items-center justify-center min-h-screen bg-gray-50 container">
       <Card className="w-full max-w-md shadow-md container">
         <CardHeader>
-          <CardTitle className="text-center text-2xl">Sign Up</CardTitle>
+          <CardTitle className="text-center text-2xl">Login</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
@@ -57,8 +57,8 @@ export default function SignupPage() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button className="w-full mt-2" onClick={handleSignup}>
-            Sign Up
+          <Button className="w-full mt-2" onClick={handleLogin}>
+            Log In
           </Button>
         </CardContent>
       </Card>

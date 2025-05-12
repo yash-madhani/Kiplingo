@@ -80,11 +80,10 @@ export default function InfluencerOnboarding() {
       setIsSubmitting(false);
     } else {
       await supabase.auth.updateUser({ data: { user_type: "influencer" } });
-      router.push("/dashboard");
+      router.push("/campaigns");
     }
   };
 
-  // Helper function to get initials from name
   const getInitials = () => {
     return name
       .split(" ")
@@ -259,11 +258,8 @@ export default function InfluencerOnboarding() {
                   Pricing Format Example:
                 </p>
                 <pre className="mt-2 overflow-x-auto text-xs text-slate-600">
-                  {`{
-  "story": 100,   // Price for Instagram/Facebook stories
-  "post": 200,    // Price for standard posts
-  "reel": 300     // Price for video content
-}`}
+                  {`{"story": 100, "post": 200, "reel": 300}
+`}
                 </pre>
                 <p className="mt-3 text-xs text-slate-500">
                   These are your standard rates. You can always negotiate
