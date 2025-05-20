@@ -12,7 +12,7 @@ function Footer() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <TrendingUp className="h-6 w-6 text-rose-500" />
-                <span className="text-lg font-bold">InfluConnect</span>
+                <span className="text-lg font-bold">Kiplingo</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Connecting brands with authentic influencers for impactful

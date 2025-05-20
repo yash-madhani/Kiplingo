@@ -21,15 +21,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
-      <body className={cn(
+    <html lang="en">
+      <body
+        className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}>
-          <Navbar/>
-        {children}
-        <Footer/>
-        </body>
+        )}
+      >
+        <Navbar />
+        
+        {/* MAIN CONTENT AREA with padding */}
+        <main className="container px-4 md:px-6 py-12">
+          {children}
+        </main>
+
+        <Footer />
+      </body>
     </html>
   );
 }
+
